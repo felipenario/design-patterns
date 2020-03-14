@@ -1,18 +1,22 @@
+import 'airbus_factory.dart';
 import 'aviao.dart';
 import 'aviao_factory.dart';
+import 'boeing_factory.dart';
 
 main() {
 
-  IAviao boeing747 = AviaoFactory().getAviao("747");
-  boeing747.exibirInfoAviao();
+  IAviaoFactory fabricaBoeing = new BoeingFactory();
+  IAviao b737 = fabricaBoeing.fazerAviao("737");
+  b737.exibirInfoAviao();
+  IAviao b747 = fabricaBoeing.fazerAviao("747");
+  b747.exibirInfoAviao();
 
-  IAviao boeing737 = AviaoFactory().getAviao("737");
-  boeing737.exibirInfoAviao();
+  IAviaoFactory fabricaAirbus = new AirbusFactory();
+  IAviao a350 = fabricaAirbus.fazerAviao("a350");
+  a350.exibirInfoAviao();
+  IAviao a380 = fabricaAirbus.fazerAviao("a380");
+  a380.exibirInfoAviao();
 
-  IAviao airbusA380 = AviaoFactory().getAviao("A380");
-  airbusA380.exibirInfoAviao();
 
-  IAviao airbusA350 = AviaoFactory().getAviao("A350");
-  airbusA350.exibirInfoAviao();
   
 }
