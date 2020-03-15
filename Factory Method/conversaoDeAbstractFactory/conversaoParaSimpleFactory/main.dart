@@ -1,14 +1,18 @@
-import 'anime.dart';
-import 'anime_factory.dart';
+import 'aviao.dart';
+import 'aviao_factory.dart';
 
-main(){
+main() {
 
-  AnimeFactory fabricaAnime = new AnimeFactory();
+  IAviao boeing747 = AviaoFactory().getAviao("747");
+  boeing747.exibirInfoAviao();
 
-  IAnime naruto = fabricaAnime.create("Naruto");
-  naruto.mostrarInfo();
+  IAviao boeing737 = AviaoFactory().getAviao("737");
+  boeing737.exibirInfoAviao();
 
-  IAnime bleach = fabricaAnime.create("Bleach");
-  bleach.mostrarInfo();
+  IAviao airbusA380 = AviaoFactory().getAviao("A380");
+  airbusA380.exibirInfoAviao();
+
+  IAviao airbusA350 = AviaoFactory().getAviao("A350");
+  airbusA350.exibirInfoAviao();
 
 }
